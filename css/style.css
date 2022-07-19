@@ -1,0 +1,72 @@
+/* IMPORT Google Fonts
+ * [For Bonus Mark]
+ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* Common & Utility Style Rules */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.link-button {
+  display: block;
+  width: 12rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background-image: linear-gradient(crimson, red);
+  color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  word-spacing: 0.5rem;
+}
+
+/*
+ * COVER SECTION 
+ *
+ */
+
+.cover-section {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.sides {
+  display: flex;
+  width: 80%;
+  margin: 0 10%;
+  justify-content: center;
+  border: 1px solid red;
+  border-radius: 5rem;
+  color: white;
+  background-color: black;
+}
+
+.side-left > h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.side-left > p {
+  margin-bottom: 2rem;
+}
+
+.side-left {
+  box-sizing: border-box;
+  padding: 8rem 0px 13rem 5rem;
+}
+
+.side-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.side-right > img {
+  height: 85%;
+  padding-right: 3rem;
+}
+/* --------------------- */
