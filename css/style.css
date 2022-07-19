@@ -24,6 +24,10 @@ body {
   word-spacing: 0.5rem;
 }
 
+.container {
+  margin-bottom: 8rem;
+}
+
 /*
  * COVER SECTION 
  *
@@ -32,7 +36,7 @@ body {
 .cover-section {
   display: flex;
   justify-content: center;
-  margin: 0.5rem 0;
+  margin-top: 0.5rem;
 }
 
 .sides {
@@ -68,5 +72,38 @@ body {
 .side-right > img {
   height: 85%;
   padding-right: 3rem;
+}
+/* --------------------- */
+
+/*
+ * BLOGS SECTION 
+ *
+ */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5rem;
+}
+
+.nav-cards {
+  margin-right: 2rem;
+  background-color: black;
+  width: 30%;
+  height: 15rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 1rem;
+}
+
+.nav-cards > .link-button {
+  width: 70%;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 /* --------------------- */
