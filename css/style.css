@@ -305,7 +305,7 @@ ul.socials {
      */
 
   .sides {
-    grid-template-rows: 20rem 43rem;
+    grid-template-rows: 1fr auto;
   }
 
   .side-left {
@@ -322,6 +322,8 @@ ul.socials {
   .side-right {
     grid-column: 2/ -2;
     grid-row: 2/-1;
+    display: flex;
+    align-items: flex-end;
   }
   /* Added Text Ellipsis */
   .side-left > p {
