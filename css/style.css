@@ -36,43 +36,35 @@ body {
 
 /* This section requires Re-doing */
 .cover-section {
+  margin-top: 1.5rem;
   display: flex;
   justify-content: center;
-  margin-top: 0.5rem;
 }
 
 .sides {
-  display: flex;
-  width: 80%;
-  margin: 0 10%;
-  justify-content: center;
-  border-radius: 5rem;
+  background-color: #161616;
+  border-radius: 2rem;
   color: white;
-  background-color: black;
-}
 
-.side-left > h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-.side-left > p {
-  margin-bottom: 2rem;
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .side-left {
-  box-sizing: border-box;
-  padding: 8rem 0px 13rem 5rem;
+  grid-column: 2 / span 5;
+}
+
+.side-left > h1 {
+  font-size: 4rem;
 }
 
 .side-right {
-  display: flex;
-  align-items: flex-end;
+  grid-column: 7 / -1;
 }
 
 .side-right > img {
-  height: 85%;
-  padding-right: 3rem;
+  width: 100%;
 }
 /* --------------------- */
 
@@ -172,6 +164,16 @@ ul.socials {
 }
 
 /* Media Queries */
+
+/* Some custom media query
+ * to handle the COVER section
+ * before entering Tablet View
+ */
+@media screen and (max-width: 1123px) {
+  .side-left > h1 {
+    font-size: 3rem;
+  }
+}
 /* For Tablets */
 @media screen and (max-width: 992px) {
   /* BLOGS Section Media Query Rules */
@@ -212,53 +214,49 @@ ul.socials {
     width: 10rem;
   }
 }
-@media screen and (max-width: 768px) {
-  .cover-section {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .sides {
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    width: 100%;
-    border-radius: 1rem;
-  }
 
-  .side {
-    width: 100%;
-    margin: 0;
-    padding: 0 1rem;
-  }
-
-  .side > h1 {
+/* Some custom media query
+ * to handle the COVER section
+ * before entering Mobile View
+ */
+@media screen and (max-width: 840px) {
+  .side-left > h1 {
     font-size: 2rem;
-    text-align: center;
+  }
+}
+
+/* For Mobile View */
+@media screen and (max-width: 768px) {
+  /*
+     * Cover Mobile View
+     *
+     */
+
+  .sides {
+    grid-template-rows: 20rem 43rem;
   }
 
   .side-left {
-    padding: 0 1rem;
+    grid-column: 2 / -2;
+    grid-row: 1 / 2;
+
+    text-align: center;
   }
 
+  .side-left > .link-button {
+    margin: 3rem auto;
+  }
+
+  .side-right {
+    grid-column: 2/ -2;
+    grid-row: 2/-1;
+  }
   /* Added Text Ellipsis */
   .side-left > p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
-  .side-right {
-    width: 90%;
-  }
-
-  .side-right > img {
-    padding: 0;
-    margin: 0;
-    align-items: center;
-  }
-
   /*
      * Blogs Mobile View
      *
