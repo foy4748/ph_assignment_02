@@ -33,8 +33,10 @@ body {
  *
  */
 
+/* This section requires Re-doing */
 .cover-section {
   display: flex;
+  display: none; /* Work with the rest */
   justify-content: center;
   margin-top: 0.5rem;
 }
@@ -44,7 +46,6 @@ body {
   width: 80%;
   margin: 0 10%;
   justify-content: center;
-  border: 1px solid red;
   border-radius: 5rem;
   color: white;
   background-color: black;
@@ -105,5 +106,112 @@ body {
 .grid-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.0rem;
+}
+
+.blog-card > img{
+    width:100%;
 }
 /* --------------------- */
+
+/* View All Button
+ * ONLY Visible in
+ * Tablet Mode
+ */
+.view-all{
+    display: none;
+    margin-top: 3rem;
+}
+
+/* Media Queries */
+/* For Tablets */
+@media screen and  (max-width: 992px) {
+    /* BLOGS Section Media Query Rules */
+    .cards{
+	flex-flow: column;
+	align-items: center;
+	margin:0;
+	padding: 1.5rem;
+    }
+
+    .nav-cards{
+	margin: 1rem auto;
+	position:static;
+	width: 100%;
+
+	flex-flow:row;
+	justify-content: space-around;
+	padding: 0;
+    }
+
+    .grid-cards{
+	grid-template-columns: repeat(2, 1fr);
+	grid-row-gap: 3rem;
+    }
+
+    .blog-card > img{
+	width: 100%;
+	margin:0;
+    }
+    
+    .view-all{
+	display: block;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .cover-section{
+	display: flex;
+	display: none; /* Work with the rest */
+	justify-content:center;
+	width:100%;
+    }
+    .sides{
+	flex-flow:column wrap;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	width: 100%;
+	border-radius:1rem;
+    }
+    
+    .side{
+	width:100%;
+	margin:0;
+	padding: 0 1rem;
+    }
+
+    .side > h1{
+	font-size:2rem;
+	text-align: center;
+    }
+
+    .side-left{
+	padding:0 1rem;
+    }
+
+    .side-right{
+	width:90%;
+    }
+
+    .side-right > img {
+      padding:0;
+      margin:0;
+      align-items: center;
+    }
+
+    /* BLOGS Section Media Query Rules */
+    .nav-cards{
+	flex-flow: column;
+    }
+
+    .grid-cards{
+	grid-template-columns: repeat(1, 1fr);
+    }
+
+    .view-all{
+	display: none;
+    }
+
+}
+
