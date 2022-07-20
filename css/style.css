@@ -37,7 +37,6 @@ body {
 /* This section requires Re-doing */
 .cover-section {
   display: flex;
-  display: none; /* Work with the rest */
   justify-content: center;
   margin-top: 0.5rem;
 }
@@ -216,7 +215,6 @@ ul.socials {
 @media screen and (max-width: 768px) {
   .cover-section {
     display: flex;
-    display: none; /* Work with the rest */
     justify-content: center;
     width: 100%;
   }
@@ -244,6 +242,13 @@ ul.socials {
     padding: 0 1rem;
   }
 
+  /* Added Text Ellipsis */
+  .side-left > p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .side-right {
     width: 90%;
   }
@@ -254,11 +259,18 @@ ul.socials {
     align-items: center;
   }
 
-  /* BLOGS Section Media Query Rules */
+  /*
+     * Blogs Mobile View
+     *
+     */
   .nav-cards {
     flex-flow: column;
+    margin: 7rem 0;
   }
 
+  .nav-cards > .link-button {
+    margin: 1rem 0;
+  }
   .grid-cards {
     grid-template-columns: repeat(1, 1fr);
   }
