@@ -47,7 +47,6 @@ body {
  *
  */
 
-/* This section requires Re-doing */
 .cover-section {
   margin-top: 1.5rem;
   display: flex;
@@ -79,6 +78,38 @@ body {
 .side-right > img {
   width: 100%;
 }
+
+/* Applying Some transitions
+ * and animations to the 
+ * WATCH Live Button 
+ */
+#watch-live-button {
+  transition: transform 200ms ease-in;
+}
+
+#watch-live-button:hover {
+  transform: scale(1.09);
+}
+
+#watch-live-button:hover > .fa-angle-right {
+  animation: sliding 1s ease-in-out infinite;
+}
+
+@keyframes sliding {
+  0% {
+    position: relative;
+    left: 0px;
+  }
+  50% {
+    position: relative;
+    left: 10px;
+  }
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+
 /* --------------------- */
 
 /*
