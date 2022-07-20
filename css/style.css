@@ -1,3 +1,4 @@
+main { display: none; }
 /* IMPORT Google Fonts
  * [For Bonus Mark]
  */
@@ -114,6 +115,51 @@ body {
 }
 /* --------------------- */
 
+/*
+ * FOOTER SECTION 
+ *
+footer{
+    background-color: black;
+    color: whitesmoke;
+}
+ */
+
+
+footer > h1 {
+    text-align:center;
+}
+ul.links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 0;
+    list-style:none;
+}
+
+ul.socials{
+    display: flex;
+    justify-content:space-around;
+    list-style:none;
+}
+
+.li-item {
+    text-align: center;
+}
+
+.li-item > a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.li-item > a:visited{
+    color: whitesmoke;
+}
+
+.social{
+    font-size: 4rem;
+}
+
+/* --------------------- */
+
 /* View All Button
  * ONLY Visible in
  * Tablet Mode
@@ -211,6 +257,26 @@ body {
 
     .view-all{
 	display: none;
+    }
+
+    /*
+     * Footer Mobile View
+     *
+     */
+    .links {
+	flex-flow: column;
+    }
+
+    .socials{
+	justify-content: center;
+    }
+
+    .social{
+	margin: 0 1rem;
+    }
+
+    .socials > .li-item{
+	font-size: 2rem;
     }
 
 }
