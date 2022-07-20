@@ -1,0 +1,14 @@
+.flags {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flags > img {
+  width: 100%;
+  margin: 0 1rem;
+}
+
+.grid-cards {
+  grid-gap: 2rem;
+}
