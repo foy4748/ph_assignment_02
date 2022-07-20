@@ -1,7 +1,7 @@
 /* IMPORT Google Fonts
  * [For Bonus Mark]
  */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 /* Common & Utility Style Rules */
 body {
@@ -141,6 +141,14 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
+}
+.blog-card {
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+}
+
+.blog-info {
+  padding: 1rem;
 }
 
 .blog-card > .link-button {

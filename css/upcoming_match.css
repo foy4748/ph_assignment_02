@@ -1,3 +1,9 @@
+.upcomig-match-card {
+  border: 1px solid lightgray;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+}
 .flags {
   display: flex;
   justify-content: space-around;
