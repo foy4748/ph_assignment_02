@@ -37,6 +37,7 @@ body {
 .active {
   color: white;
   background-color: #dd0000;
+  outline: none;
 }
 .container {
   margin-bottom: 8rem;
